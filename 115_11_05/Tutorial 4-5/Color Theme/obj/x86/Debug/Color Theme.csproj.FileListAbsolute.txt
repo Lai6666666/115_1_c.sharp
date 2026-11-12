@@ -33,3 +33,4 @@ C:\Users\m303\Desktop\115_1_c.sharp\115_11_05\Tutorial 4-5\Color Theme\obj\x86\D
 C:\Users\m303\Desktop\115_1_c.sharp\115_11_05\Tutorial 4-5\Color Theme\obj\x86\Debug\Color Theme.csproj.CoreCompileInputs.cache
 C:\Users\m303\Desktop\115_1_c.sharp\115_11_05\Tutorial 4-5\Color Theme\obj\x86\Debug\Color Theme.exe
 C:\Users\m303\Desktop\115_1_c.sharp\115_11_05\Tutorial 4-5\Color Theme\obj\x86\Debug\Color Theme.pdb
+C:\Users\m303\Desktop\115_1_c.sharp\115_11_05\Tutorial 4-5\Color Theme\obj\x86\Debug\Color Theme.exe.config

@@ -1,0 +1,74 @@
+﻿using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows.Forms;
+
+namespace Ending_Balance
+{
+    public partial class Form1 : Form
+    {
+        public Form1()
+        {
+            InitializeComponent();
+        }
+
+        private void calculateButton_Click(object sender, EventArgs e)
+        {
+            decimal balance; 
+            int months;
+
+            int count = 1;
+
+            if(decimal.TryParse(startingBalTextBox.Text, out balance) 
+            {
+                if(int.TryParse(monthsTextBox.Text, out months))
+                {
+                    // Clear the ListBox.
+                    detailListBox.Items.Clear();
+                    // Calculate the ending balance for each month.
+                    while (count <= months)
+                    {
+                        balance += balance * 0.005m; // Add 0.5% interest
+                        detailListBox.Items.Add($"Month {count}: {balance:C}");
+                        count++;
+                    }
+                    // Display the ending balance in the Label control.
+                    endingBalanceLabel.Text = balance.ToString("C");
+                }
+                else
+                {
+                    MessageBox.Show("Please enter a valid numeric value for number of months.", "Input Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+
+            }
+            else
+            {
+                MessageBox.Show("Please enter valid numeric values for starting balance and number of months.", "Input Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void clearButton_Click(object sender, EventArgs e)
+        {
+            // Clear the TextBoxes, the endingBalanceLabel control,
+            // and the ListBox.
+            startingBalTextBox.Text = "";
+            monthsTextBox.Text = "";
+            endingBalanceLabel.Text = "";
+            detailListBox.Items.Clear();
+
+            // Reset the focus.
+            startingBalTextBox.Focus();
+        }
+
+        private void exitButton_Click(object sender, EventArgs e)
+        {
+            // Close the form.
+            this.Close();
+        }
+    }
+}
